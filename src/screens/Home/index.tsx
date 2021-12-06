@@ -17,16 +17,6 @@ export function Home(){
     thumbnail: 'https://pngimg.com/uploads/audi/audi_PNG99491.png'
   }
 
-  // const carDataTwo = {
-  //   brand: 'Porsche',
-  //   name: 'Panamera',
-  //   rent: {
-  //   period: 'Ao dia',
-  //   price: 300,
-  //   },
-  //   thumbnail: 'https://cdn.picpng.com/porsche/porsche-picture-29281.png'
-  // }
-
   return (
     <Container>
       <StatusBar 

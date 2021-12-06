@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BackButton } from "../../BackButton";
+import { BackButton } from "../../components/BackButton";
 import { ImageSlider } from "../../components/imageSlider";
 
 import {
