@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Button } from "../../components/Button";
 import { Accessory } from "../../components/Accessory";
 import { BackButton } from "../../components/BackButton";
 import { ImageSlider } from "../../components/imageSlider";
@@ -24,7 +25,8 @@ import {
   Period,
   Price,
   About,
-  Accessories
+  Accessories,
+  Footer
 } from "./styles";
 
 export function CarDetails() {
@@ -69,6 +71,10 @@ export function CarDetails() {
           cumque repellendus!
         </About>
       </Content>
+
+      <Footer>
+        <Button title="Confirmar" />
+      </Footer>
     </Container>
   );
 }
