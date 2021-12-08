@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { StatusBar } from "react-native";
-import { useNavigation, CommonActions } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 import { RFValue } from "react-native-responsive-fontsize";
 
 import { api } from "../../services/api";
@@ -10,27 +10,23 @@ import { Car } from "../../components/Car";
 import { Load } from "../../components/Load";
 import { Container, Header, HeaderContent, TotalCars, CarList } from "./styles";
 
+interface NavigationProps{
+  navigate:(
+    screen: string,
+    carObject:{
+      car: CarDTO
+    }
+  ) => void
+}
+
 export function Home() {
   const [cars, setCars] = useState<CarDTO[]>([]);
   const [ loading, setLoading] = useState(true);
-  const navigation = useNavigation();
+  const navigation = useNavigation<NavigationProps>();
 
-  const carData = {
-    brand: "Audi",
-    name: "R$ 5 Coupé",
-    rent: {
-      period: "Ao dia",
-      price: 220,
-    },
-    thumbnail: "https://pngimg.com/uploads/audi/audi_PNG99491.png",
-  };
-  function handleCarDetails() {
-    navigation.dispatch(
-      CommonActions.navigate({
-        name: 'CarDetails',
-      })
-    );
-  }
+  function handleCarDetails(car: CarDTO) {
+    navigation.navigate('CarDetails', { car });
+}
 
   useEffect(() => {
     async function fetchCars() {
@@ -67,7 +63,7 @@ export function Home() {
         data={cars}
         keyExtractor={item => item.id}
         renderItem={({ item }) => 
-          <Car data={item} onPress={handleCarDetails}/>}
+          <Car data={item} onPress={() => handleCarDetails(item)}/>}
         />
       }
       
