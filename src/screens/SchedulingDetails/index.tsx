@@ -51,13 +51,19 @@ export function SchedulingDetails() {
     navigation.dispatch(
       CommonActions.navigate({
         name: 'SchedulingComplete',
-      })
+      }
+      )
     );
   }
+
+  function handleBack() {
+    navigation.goBack();
+  }
+  
   return (
     <Container>
       <Header>
-        <BackButton onPress={() => {}} />
+        <BackButton onPress={handleBack} />
       </Header>
 
       <CarImages>
