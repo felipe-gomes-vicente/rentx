@@ -6,7 +6,13 @@ Alugar o Carro Perfeito para o seus Planos com a vista e parcelado para sua maio
 e Aluga em até 6x Sem Juros. 
 
 <h1 align="center">
-    <img alt="Rentx" title="Rentx" src="" />
+    <img alt="Rentx" title="Rentx" src="https://github.com/felipe-gomes-vicente/rentx/blob/main/src/assets/car1.gif" />
+</h1>
+
+<br>
+
+<h1 align="center">
+    <img alt="Rentx" title="Rentx" src="https://github.com/felipe-gomes-vicente/rentx/blob/main/src/assets/car2.gif" />
 </h1>
 
 <br>
